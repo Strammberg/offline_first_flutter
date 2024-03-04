@@ -1,16 +1,6 @@
 # offline_first
 
-Project for testing offline first mechanic
+Small project to play around with offline first mechanic in Flutter with Dio and Hive.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+To install the project, clone and and run `flutter pub get` in main directory.
+Afterwards, you can start the app by running flutter start.
