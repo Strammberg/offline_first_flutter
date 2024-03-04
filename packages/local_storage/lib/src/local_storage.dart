@@ -19,7 +19,6 @@ class LocalStorage {
   static Future<void> setBox<T>(StorageKey key, List<T> values) async {
     await _storages[key]?.remoteAll();
     await _storages[key]?.addAll(values);
-    print('FINISHED SETTING DATA');
   }
 
   /// deletes an item by its id from a box
@@ -37,12 +36,8 @@ class LocalStorage {
   static Future<void> deleteFromBoxAt(StorageKey key, int index) async
   => _storages[key]?.remoteAt(index);
 
-  static Stream<T?> getStream<T>(StorageKey key) {
-    return _storages[key]!.box!.watch().map((event) {
-      print('${event.value} THATS MY VALUE');
-      return event.value;
-    });
-  }
+  static Stream<T?> getStream<T>(StorageKey key)
+    => _storages[key]!.box!.watch().map((event) => event.value);
 
   /// loads all local databases as hive boxes
   static Future<void> loadBoxes() async {
